@@ -67,7 +67,7 @@ function calcScore() {
   } else {
     comp = `${points} points`
   }
-  if (hs == undefined) {
+  if (hs != undefined) {
     comp+=`<br>High Score: ${hs} points`
   }
   const scoreCont = document.getElementById('score')
@@ -101,8 +101,8 @@ function checkAns() {
 }
 
 function reset() {
-  localStorage.clear()
   const points = localStorage.points
+  localStorage.clear()
   sessionStorage.clear()
   localStorage.hs = points
   populatePage()
