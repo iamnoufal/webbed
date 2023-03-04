@@ -132,7 +132,6 @@ function populatePage() {
   const data = generateQuestion()
   const comp = renderComponent(data.date, data.options)
   timer()
-  clearInterval(count)
   calcScore()
 }
 
@@ -148,5 +147,4 @@ function timer() {
       begin -= 1
     }
   }, 1000)
-  
 }
